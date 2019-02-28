@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+    function checkNumber()
+    {
+        const pnumber = document.getElementById("pnumber").value;
+        if(/^(09[0-9]{8}|\+4219[0-9]{8}|004219[0-9]{8})$/.test(pnumber))
+        {
+            let smile = document.getElementById("img");
+            let att = document.createAttribute("src"); 
+            let att2 = document.createAttribute("style"); 
+            att.value = "https://vignette.wikia.nocookie.net/olympians/images/2/26/Smile.png/revision/latest?cb=20110611224157";        
+            att2.value = "width:50px;height:50px;";
+            smile.setAttributeNode(att);
+            smile.setAttributeNode(att2);
+        }
+        else
+        {
+            let smile = document.getElementById("img");
+            let att = document.createAttribute("src"); 
+            let att2 = document.createAttribute("style"); 
+            att.value = "https://cdn.shopify.com/s/files/1/1061/1924/products/Very_sad_emoji_icon_png_large.png?v=1480481019";        
+            att2.value = "width:50px;height:50px;";
+            smile.setAttributeNode(att);
+            smile.setAttributeNode(att2);
+        }
+    }
+</script>
+</head>
+<body>
+
+    <center>
+        <p>Check phone number validity</p>
+        <table>
+                <tr>
+                  <th> <input type="text" id="pnumber"></br></th>
+                  <th><button onclick="checkNumber()">Check</button></th>
+                  <th><img id="img"></th>
+                </tr>
+        </table> 
+    </center>
+
+</body>
+</html> 
